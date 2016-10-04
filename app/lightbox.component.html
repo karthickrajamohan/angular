@@ -1,0 +1,11 @@
+<div class="lightbox">
+    <div>
+        <a (click)="closed()" >x</a>
+    </div>
+    <div *ngIf="photo">
+        <h2>{{photo[selectedIndex].title}}</h2>
+        <img [src]="photo[selectedIndex].src" />
+        <div (click)="nextPhoto()"> Next >> </div>
+        <div (click)="prevPhoto()"> << Previous</div>
+    </div>
+</div>
